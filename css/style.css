@@ -428,28 +428,122 @@ section {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 4.5rem;
+    gap: 4rem;
 }
 .about__image {
     padding-left: 20px;
 }
 .about__image h4 {
-    font-size: 32px;
+    font-size: 34px;
     text-align: center;
+    margin-bottom: 15px;
 }
 .about__banner {
     width: 500px;
     height: 300px;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 2px 2px 5px -2px rgba(50, 50, 93, 0.25);
 }
 .about__banner img {
     width: 600px;
-    transition: 0.3s ease;
+    transition: 2s ease;
 }
 .about__banner:hover img {
     transform: scale(1.1) rotate(5deg);
-    transition: 0.3s ease;
+    transition: 2s ease;
+}
+.about__content {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about__content h3.about__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: -webkit-linear-gradient(180deg, #006496, #051937);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about__desc {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.about__supText {
+    color: var(--font-color);
+    font-size: 12px;
+    font-weight: 500;
+}
+.about__contact {
+    margin-bottom: 15px;
+}
+.about__contact-input {
+    width: 220px;
+    outline: none;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+.about__contact-btn {
+    background: var(--bg-color);
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.about__contact-btn:hover {
+    background: var(--btn-color);
+    color: var(--font-color);
+}
+.about__contact-btn:focus {
+    background: var(--first-color);
+}
+.about__contact-choose {
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 2px;
+}
+.about__zodiac-run {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 99px;
+    border-radius: 10px;
+    background: rgba(146, 230, 249, 0.3);
+    border: 2px solid var(--first-color);
+    overflow: hidden;
+}
+.about__zodiac-run img {
+    height: 80px;
+}
+.about__zodiac-run .run {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: run 5s linear infinite;
+}
+.run h3 {
+    font-size: 30px;
+    background: -webkit-linear-gradient(180deg, #3B44F6, #A149FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes run {
+    0% {
+        left: -51%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 
