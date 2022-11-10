@@ -559,10 +559,9 @@ section {
 }
 
 
-
-
 .zodiac {
     /* background: #607f8f; */
+    padding-top: 40px;
 }
 .zodiac__container {
     display: flex;
@@ -603,7 +602,7 @@ section {
 .zodiac__item {
     background: var(--first-color);
     border-radius: 8px;
-    border: 1px solid #e1e3ea;
+    border: 2px solid #e1e3ea;
     box-shadow: 1px 1px 3px 0 rgba(175, 149, 143, 0.3);
     transition: all .3s;
     text-align: center;
@@ -639,6 +638,27 @@ section {
     box-shadow: 3px 3px 10px 0 rgba(95, 96, 115, 0.5);
     transform: translateY(-3px);
 }
+.zodiac__item:hover img {
+    animation: rotateImg 1s ease;
+}
+@keyframes rotateImg {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    75% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 
 .contact {
     background: #0571a7;
