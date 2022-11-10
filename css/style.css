@@ -15,6 +15,8 @@
     --btn-color: #ffb627;
     --font-color: #023047;
     --border-color: #fff;
+    --font-gradient-1: -webkit-linear-gradient(180deg, #3B44F6, #A149FA);
+    --font-gradient-2: -webkit-linear-gradient(180deg, #006496, #051937);
 }
 body.dark {
     --bg-color: #032b3f;
@@ -422,7 +424,7 @@ section {
 /* About Section */
 .about {
     padding: 80px 0;
-    background: #7eb5d0;
+    /* background: #7eb5d0; */
 }
 .about__container {
     display: flex;
@@ -430,18 +432,21 @@ section {
     justify-content: space-between;
     gap: 4rem;
 }
-.about__image {
-    padding-left: 20px;
-}
 .about__image h4 {
     font-size: 34px;
     text-align: center;
     margin-bottom: 15px;
+    color: var(--font-color);
+    background: var(--first-color);
+    border-radius: 20px;
 }
 .about__banner {
     width: 500px;
     height: 300px;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     box-shadow: 2px 2px 5px -2px rgba(50, 50, 93, 0.25);
 }
@@ -454,7 +459,7 @@ section {
     transition: 2s ease;
 }
 .about__content {
-    margin-right: 20px;
+    /* margin-right: 20px;   */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -463,13 +468,14 @@ section {
     text-align: center;
     font-size: 24px;
     margin-bottom: 10px;
-    background: -webkit-linear-gradient(180deg, #006496, #051937);
+    background: var(--font-gradient-2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .about__desc {
     text-align: center;
     margin-bottom: 10px;
+    color: var(--font-color);
 }
 .about__supText {
     color: var(--font-color);
@@ -487,7 +493,7 @@ section {
     border-radius: 2px;
 }
 .about__contact-btn {
-    background: var(--bg-color);
+    background: var(--blue-color);
     border: none;
     outline: none;
     padding: 4px 8px;
@@ -502,6 +508,12 @@ section {
 }
 .about__contact-btn:focus {
     background: var(--first-color);
+}
+.about__contact-text {
+    font-size: 16px;
+    color: var(--font-color);
+    font-weight: 500;
+    padding-right: 10px;
 }
 .about__contact-choose {
     border: none;
@@ -533,7 +545,7 @@ section {
 }
 .run h3 {
     font-size: 30px;
-    background: -webkit-linear-gradient(180deg, #3B44F6, #A149FA);
+    background: var(--font-gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -550,9 +562,84 @@ section {
 
 
 .zodiac {
-    background: #607f8f;
-    min-height: 100vh;
+    /* background: #607f8f; */
 }
+.zodiac__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.zodiac__title {
+    display: inline-block;
+    background: var(--first-color);
+    color: var(--font-color);
+    margin-top: 14px;
+    margin-bottom: 12px;
+    padding: 8px 8px 4px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.zodiac__sign {
+    color: var(--font-color);
+    line-height: 60px;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.zodiac__list {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.zodiac__item {
+    background: var(--first-color);
+    border-radius: 8px;
+    border: 1px solid #e1e3ea;
+    box-shadow: 1px 1px 3px 0 rgba(175, 149, 143, 0.3);
+    transition: all .3s;
+    text-align: center;
+}
+.zoidac__item-link {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 12px 4px;
+    text-decoration: none;
+}
+.zodiac__item-img {
+    width: 100px;
+    border-radius: 100px;
+}
+.zodiac__item-img > img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.zodiac__item-name {
+    margin-top: 4px;
+    margin-bottom: 0;
+    color: var(--font-color);
+    font-size: 22px;
+}
+.zodiac__item-date {
+    color: var(--font-color);
+}
+.zodiac__item:hover {
+    border-style: solid;
+    border-color: var(--blue-color);
+    box-shadow: 3px 3px 10px 0 rgba(95, 96, 115, 0.5);
+    transform: translateY(-3px);
+}
+
 .contact {
     background: #0571a7;
     min-height: 100vh;
