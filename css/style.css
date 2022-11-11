@@ -19,8 +19,8 @@
     --font-gradient-2: -webkit-linear-gradient(180deg, #006496, #051937);
 }
 body.dark {
-    --bg-color: #032b3f;
-    --main-color: #04384e;
+    --bg-color: #001f2e;
+    --main-color: #062c3b;
     --first-color: #0c445c;
     --box-color: #3f6271;
     --second-color: #d0f0ff;
@@ -28,6 +28,8 @@ body.dark {
     --btn-color: #006496;
     --font-color: #b8e7ff;
     --border-color: #032b3f;
+    --font-gradient-1: -webkit-linear-gradient(180deg, #ffcf77, #63a0fc);
+    --font-gradient-2: -webkit-linear-gradient(180deg, #3B44F6, #A149FA);
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -94,11 +96,13 @@ header {
     width: 100%;
     height: 60px;
     background: var(--main-color);
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     transition: 0.3s linear;
     z-index: 100;
 }
 header.bg-header {
     background: none;
+    box-shadow: none;
     margin-top: 10px;
     transition: 0.3s linear;
 }
@@ -284,7 +288,7 @@ section {
 .btn-zodiac {
     position: relative;
     display: inline-block;
-    padding: 10px 12px;
+    padding: 10px 20px;
     border-radius: 14px;
     font-size: 20px;
     font-weight: 700;
@@ -530,7 +534,7 @@ section {
     height: 99px;
     border-radius: 10px;
     background: rgba(146, 230, 249, 0.3);
-    border: 2px solid var(--first-color);
+    border: 5px solid var(--first-color);
     overflow: hidden;
 }
 .about__zodiac-run img {
@@ -690,6 +694,28 @@ section {
     padding: 20px 60px 40px 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.contact__container::after {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: -20%;
+    left: -10%;
+    border-radius: 50%;
+    background: var(--box-color);
+}
+.contact__container::before {
+    content: '';
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    bottom: -30%;
+    right: 5%;
+    border-radius: 50%;
+    background: var(--box-color);
 }
 .contact__content {
     display: flex;
