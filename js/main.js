@@ -47,3 +47,46 @@ const toggleMode = () => {
     body.classList.toggle("dark")
 }
 darkMode.addEventListener('click', toggleMode)
+
+//Send Email With EmailJS -> https://www.emailjs.com/
+function validate() {
+    let name = document.querySelector('.name')
+    let email = document.querySelector('.email')
+    let msg = document.querySelector('.message')
+    let sendBtn = document.querySelector('.sendBtn')
+
+    sendBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (name.value == '' || email.value == '' || msg.value == '') {
+            emptyerr()
+        } else {
+            sendemail(name.value, email.value, msg.value)
+            success()
+        }
+    })
+}
+validate()
+// Send email
+function sendemail(name, email, msg) {
+    emailjs.send("service_jslr5pp","template_eia8y2f",{
+        to_name: name,
+        from_name: email,
+        message: msg,
+    });
+}
+// Error Alert
+function emptyerr() {
+    swal({
+        title: "Ôi không....",
+        text: "Các mục không được để trống!",
+        icon: "error",
+    });
+}
+// Success alert
+function success() {
+    swal({
+        title: "Gửi email thành công!!",
+        text: "Chúng tôi sẽ cố gắng phản hồi trong 24h tới",
+        icon: "success",
+    });
+}

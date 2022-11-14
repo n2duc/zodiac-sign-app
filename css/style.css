@@ -193,42 +193,6 @@ header.bg-header {
     text-decoration: none;
     transition: 0.3s linear;
 }
-.nav__dropmenu {
-    display: none;
-    min-width: 220px;
-    position: absolute;
-    padding-top: 24px;
-    z-index: -999;
-    transition: all linear 0.5s;
-}
-.nav__links li:hover .nav__dropmenu {
-    display: block;
-    z-index: 999;
-    transition: all linear 0.5s;
-}
-.nav__dropmenu li {
-    margin: 0;
-    width: 100%;
-}
-.nav__dropmenu li a {
-    width: 100%;
-    display: inline-block;
-    padding: 14px;
-    background-color: var(--main-color);
-    color: var(--font-color);
-}
-.nav__dropmenu li:first-child a {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.nav__dropmenu li:last-child a {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.nav__dropmenu li a:hover {
-    background-color: var(--first-color);
-    padding-left: 20px;
-}
 .btn:hover {
     box-shadow: 0px 0px 8px var(--btn-color);
     transition: 0.3s linear;
@@ -604,7 +568,7 @@ section {
     grid-auto-columns: 1fr;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
 }
 .zodiac__item {
@@ -802,7 +766,7 @@ section {
 .contact__form .message-box {
     min-height: 110px;
 }
-.contact__button .button {
+.contact__button .sendBtn {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -831,14 +795,14 @@ section {
     will-change: box-shadow,transform;
     font-size: 16px;
 }
-.contact__button .button:focus {
+.contact__button .sendBtn:focus {
     box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
-.contact__button .button:hover {
+.contact__button .sendBtn:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
     transform: translateY(-2px);
 }
-.contact .button:active {
+.contact .sendBtn:active {
     box-shadow: #3c4fe0 0 3px 7px inset;
     transform: translateY(2px);
 }
@@ -901,44 +865,43 @@ section {
     font-size: 20px;
     line-height: 40px;
 }
-.contact__social-btn:nth-child(1):hover .social-icon {
+.contact__social-btn:nth-child(2):hover .social-icon {
     background: #4361ee;
 }
-.contact__social-btn:nth-child(2):hover .social-icon {
+.contact__social-btn:nth-child(3):hover .social-icon {
     background: #70d6ff;
 }
-.contact__social-btn:nth-child(3):hover .social-icon {
+.contact__social-btn:nth-child(4):hover .social-icon {
     background: #9d4edd;
 }
-.contact__social-btn:nth-child(4):hover .social-icon {
+.contact__social-btn:nth-child(5):hover .social-icon {
     background: #0077b6;
 }
-.contact__social-btn:nth-child(5):hover .social-icon {
+.contact__social-btn:nth-child(6):hover .social-icon {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 .contact__social-btn:hover .social-icon i {
     color: #fff;
 }
 .contact__social-btn span {
-    color: var(--font-color);
     font-size: 16px;
     line-height: 40px;
     margin-left: 10px;
     font-weight: 500;
 }
-.contact__social-btn:nth-child(1) span {
+.contact__social-btn:nth-child(2) span {
     color: #4361ee;
 }
-.contact__social-btn:nth-child(2) span {
+.contact__social-btn:nth-child(3) span {
     color: #70d6ff;
 }
-.contact__social-btn:nth-child(3) span {
+.contact__social-btn:nth-child(4) span {
     color: #9d4edd;
 }
-.contact__social-btn:nth-child(4) span {
+.contact__social-btn:nth-child(5) span {
     color: #0077b6;
 }
-.contact__social-btn:nth-child(5) span {
+.contact__social-btn:nth-child(6) span {
     color: #fb6f92;
 }
 /* Footer */
